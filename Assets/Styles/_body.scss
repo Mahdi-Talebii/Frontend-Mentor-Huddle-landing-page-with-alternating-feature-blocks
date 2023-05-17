@@ -1,0 +1,80 @@
+// this part os for the main body styles
+
+div[role=main] {
+
+
+    .level-1, .level-2, .level-3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        width: 87%;
+        margin-bottom: 3rem;
+        border-radius: 1.5rem;
+        padding: 4rem 3rem;
+
+        .main-level-imgs {
+            width: 90%;
+            margin-bottom: 2.5rem;
+        }
+
+        .main-levels-textbox {
+            h2 {
+                margin: 2.5rem 0rem 2rem;
+            }
+    
+            p {
+                width: 90%;
+                color: hsl(208, 11%, 55%);
+            }
+        }
+
+    }
+
+    .level-4 {
+        width: 87%;
+        padding: 3rem 1rem;
+        border-radius: 3rem;
+        margin-top: 10vh;
+        background-color: white;
+        z-index: 2;
+
+        h3 {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+@media all and (min-width:376px) {
+    div[role=main] {
+
+        .level-1, .level-2, .level-3 {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            column-gap: 5%;
+            padding: 5rem 6rem !important;
+
+            .main-levels-textbox {
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+        }
+
+        .level-2 {
+            
+            .left-side-img {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            .main-levels-textbox {
+                grid-column: 2 / 3;
+            }
+        }
+
+        .level-4 {
+            width: 30%;
+        }
+    }
+}

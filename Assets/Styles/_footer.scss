@@ -1,0 +1,89 @@
+// this part is for the footer styles
+
+div[role=footer] {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: hsl(192, 100%, 9%);
+    width: 100%;
+    padding: 4rem 2rem;
+    box-shadow: 0px -6rem .5px hsl(192, 100%, 9%);
+    z-index: 1;
+
+    p, a {
+        color: white;
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    .footer-logo-img {
+        filter: brightness(0%)
+        invert(100%);
+        width: 15rem;
+        margin-bottom: 3rem;
+    }
+
+    .links {
+        display: flex;
+        align-items: self-start;
+        justify-content: self-start;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        a {
+            margin-bottom: 1rem;
+        }
+
+        a:hover {
+            color: hsl(322, 100%, 66%);
+        }
+    }
+
+    .footer-text {
+        margin-bottom: 2rem;
+        img {
+            margin-right: 1rem;
+        }
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+    }
+
+    .img-links {
+        width: 100%;
+        img {
+            filter: invert(100%);
+            width: 3rem;
+        }
+
+        :nth-child(2) {
+            margin: 0rem 1rem;
+        }
+
+
+    }
+}
+
+
+@media all and (min-width:376px) {
+
+    div[role=footer] {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+        grid-template-rows: 3fr 1fr;
+        column-gap: 5%;
+        place-items: start;
+        padding: 7rem 2rem 3rem 12rem;
+
+        .img-links {
+           width: fit-content;
+        }
+
+        .copyright {
+            grid-column: 4 / 5;
+        }
+    }
+}
